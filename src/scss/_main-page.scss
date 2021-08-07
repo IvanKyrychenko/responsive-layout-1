@@ -1,25 +1,6 @@
 $font-stack: "Georama", sans-serif;
 $background-color: #62d0df;
 
-header {
-    font: 100% $font-stack;
-    font-size: 14px;
-    position: absolute;
-    z-index: 99;
-    width: 100%;
-}
-.menu {
-    display: flex;
-    li {
-        margin: 0px 14px;
-        padding: 7px 0;
-        border: 1px solid transparent;
-        &:hover {
-            border-bottom-color: black;
-            cursor: pointer;
-        }
-    }
-}
 .wrapper {
     width: 1160px;
     max-width: 100%;
@@ -27,29 +8,52 @@ header {
     padding: 0px 20px;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    padding-top: 38px;
-    padding-bottom: 38px;
-    justify-content: space-between;
-    h5 {
-        color: #62d0df;
-        font-size: 24px;
+header {
+    font: 100% $font-stack;
+    font-size: 14px;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    .menu {
+        display: flex;
+        li {
+            margin: 0px 14px;
+            padding: 7px 0;
+            border: 1px solid transparent;
+            &:hover {
+                border-bottom-color: black;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    
+    .header-container {
+        display: flex;
+        align-items: center;
+        padding-top: 38px;
+        padding-bottom: 38px;
+        justify-content: space-between;
+        a {
+            color: #62d0df;
+            font-size: 24px;
+            
+        }
+    }
+    .contact-button {
+        padding: 21px 31px;
+        border: none;
+        color: #ffffff;
+        background-color: $background-color;
+        border-radius: 38px;
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            cursor: pointer;
+        }
     }
 }
-.contact-button {
-    padding: 21px 31px;
-    border: none;
-    color: #ffffff;
-    background-color: $background-color;
-    border-radius: 38px;
-    &:hover {
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        cursor: pointer;
-    }
-}
+
 .hero {
     font: 100% $font-stack;
     width: 100%;
@@ -300,16 +304,28 @@ header {
         color: #e9b730;
         margin-right: 10px;
     }
-    .box-1 {
-        width: 33%;
-        background-color: #22356f;
+    .box {
+        width: 33.33%;
         font-size: 32px;
-        padding: 126px 219px 282px 94px;
+        padding: 126px 50px 282px 94px;
         .overline {
             height: 1px;
             width: 100%;
             background-color: #ffffff;
             margin-bottom: 23px;
+            transition: all 200ms ease-in-out;  
+        }
+        .text-container {
+            display: flex;
+            flex-wrap: nowrap;
+            line-height: 1;
+        }
+        &:hover {
+            filter: hue-rotate(180deg);
+            cursor: pointer;
+            .overline {
+                transform: translate(0, -20px);
+            }
         }
         @media (max-width: 1000px) {
             width: 50%;
@@ -317,97 +333,25 @@ header {
         @media (max-width: 550px) {
             width: 100%;
         }
+    }
+    .box-1 {
+        background-color: #22356f;
     }
     .box-2 {
-        width: 33%;
         background-color: #0052c1;
-        font-size: 32px;
-        padding: 126px 219px 282px 94px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
-        }
-        @media (max-width: 1000px) {
-            width: 50%;
-        }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
     }
     .box-3 {
-        width: 34%;
-        max-height: 55%;
-        background: url("../images/pg4b.png"); /* How to fix the position of image? */
-        font-size: 32px;
-        padding: 126px 219px 282px 94px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
-        }
-        @media (max-width: 1000px) {
-            width: 50%;
-        }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
+        background: url("../images/pg4b.png");
+        background-size: cover;
     }
     .box-4 {
-        width: 33%;
         background-color: #62d0df;
-        font-size: 32px;
-        padding: 126px 170px 282px 94px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
-        }
-        @media (max-width: 1000px) {
-            width: 50%;
-        }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
     }
     .box-5 {
-        width: 33%;
         background-color: #dee1ff;
-        font-size: 32px;
-        padding: 126px 219px 282px 94px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
-        }
-        @media (max-width: 1000px) {
-            width: 50%;
-        }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
     }
     .box-6 {
-        width: 34%;
         background-color: #8f00ff;
-        font-size: 32px;
-        padding: 126px 219px 282px 94px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
-        }
-        @media (max-width: 1000px) {
-            width: 50%;
-        }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
     }
 }
 .screen-5 {
@@ -558,6 +502,7 @@ header {
     justify-content: flex-end;
     @media (max-width: 700px) {
         min-height: unset;
+        background-color:#fcfcfc;
     }
     &::before {
         content: "";
@@ -583,7 +528,7 @@ header {
             font-size: 16px;
             padding: 103px 50px 100px 60px;
             @media (max-width: 700px) {
-                padding: 0px 50px 0px 60px;
+                padding: 0px 20px 0px 20px;
             }
         }
         h1 {
@@ -591,6 +536,10 @@ header {
             font-size: 36px;
             font-weight: bold;
             padding: 110px 50px 100px 60px;
+            @media (max-width: 700px) {
+                padding: 40px 20px;
+                font-size: 30px;
+            }
         }
     }
     button {
@@ -601,6 +550,9 @@ header {
         background-color: #ffffff;
         border: 2px solid #fab63e;
         transition-duration: 0.4s;
+        @media (max-width: 700px) {
+            margin: 0px 20px 40px 20px;
+        }
         &:hover {
             background-color: #fab63e;
             color: white;
@@ -620,6 +572,7 @@ header {
     flex-wrap: wrap;
     @media (max-width: 1010px) {
         min-height: unset;
+        padding: 40px 0 60px;
     }
     &::before {
         content: "";
@@ -645,22 +598,34 @@ header {
             color: #ffffff;
             padding: 103px 0px;
             @media (max-width: 1010px) {
-                padding-top: 50px;
+                padding-top: 0;
+                padding-bottom: 50px;
             }
         }
         h1 {
             font-size: 64px;
             color: #ffffff;
             padding: 127px 0px 38px 0px;
-             @media (max-width: 1010px) {
-                 padding-top: 20px;
-             }
+            @media (max-width: 1010px) {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                font-size: 50px;
+            }
         }
         p {
             font-size: 36px;
             color: #ffffff;
             padding-top: 37px;
             max-width: 50%;
+            @media (max-width: 1010px) {
+                font-size: 28px;
+            }
+            @media (max-width: 830px) {
+                max-width: 80%;
+            }
+            @media (max-width: 700px) {
+                max-width: 100%;
+            }
         }
         button {
             font-family: inherit;
@@ -670,6 +635,11 @@ header {
             background-color: #22356f;
             border: 2px solid #ffffff;
             transition-duration: 0.4s;
+            @media (max-width: 1010px) {
+                font-size: 23px;
+                padding: 5px 10px;
+                margin-bottom: 0px;
+            }
             &:hover {
                 background-color: #ffffff;
                 color: #22356f;
