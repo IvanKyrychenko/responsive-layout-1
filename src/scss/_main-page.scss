@@ -26,8 +26,7 @@ header {
             }
         }
     }
-    
-    
+
     .header-container {
         display: flex;
         align-items: center;
@@ -37,7 +36,6 @@ header {
         a {
             color: #62d0df;
             font-size: 24px;
-            
         }
     }
     .contact-button {
@@ -215,6 +213,7 @@ header {
         margin: 6px 50px 5px 106px;
         @media (max-width: 900px) {
             margin: unset;
+            max-width: unset;
             padding: 0 20px;
         }
     }
@@ -252,6 +251,9 @@ header {
         width: 25%;
         font-size: 32px;
         padding: 95px 50px 211px 68px;
+        @media (max-width: 500px) {
+            padding: 85px 65px;
+        }
         &.first {
             background-color: #ffe2de;
         }
@@ -277,7 +279,7 @@ header {
             line-height: 1;
         }
         &:hover {
-            filter: hue-rotate(180deg);
+            filter: hue-rotate(30deg);
             cursor: pointer;
             .overline {
                 transform: translate(0, -20px);
@@ -308,12 +310,15 @@ header {
         width: 33.33%;
         font-size: 32px;
         padding: 126px 50px 282px 94px;
+        @media (max-width: 500px) {
+            padding: 85px 65px;
+        }
         .overline {
             height: 1px;
             width: 100%;
             background-color: #ffffff;
             margin-bottom: 23px;
-            transition: all 200ms ease-in-out;  
+            transition: all 200ms ease-in-out;
         }
         .text-container {
             display: flex;
@@ -321,7 +326,7 @@ header {
             line-height: 1;
         }
         &:hover {
-            filter: hue-rotate(180deg);
+            filter: hue-rotate(30deg);
             cursor: pointer;
             .overline {
                 transform: translate(0, -20px);
@@ -343,6 +348,9 @@ header {
     .box-3 {
         background: url("../images/pg4b.png");
         background-size: cover;
+        &:hover {
+            filter: none;
+        }
     }
     .box-4 {
         background-color: #62d0df;
@@ -379,6 +387,17 @@ header {
         }
         @media (max-width: 550px) {
             min-width: 100%;
+            padding-bottom: 15px;
+            p,
+            h1 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                padding-top: 0px;
+            }
         }
     }
     .box-2 {
@@ -398,6 +417,17 @@ header {
         }
         @media (max-width: 550px) {
             min-width: 100%;
+            padding-bottom: 15px;
+            p,
+            h1 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                padding-top: 0px;
+            }
         }
     }
     .box-3 {
@@ -417,6 +447,17 @@ header {
         }
         @media (max-width: 550px) {
             min-width: 100%;
+            padding-bottom: 15px;
+            p,
+            h1 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                padding-top: 0px;
+            }
         }
     }
     .box-4 {
@@ -436,6 +477,17 @@ header {
         }
         @media (max-width: 550px) {
             min-width: 100%;
+            padding-bottom: 15px;
+            p,
+            h1 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                padding-top: 0px;
+            }
         }
     }
     .box-5 {
@@ -456,6 +508,17 @@ header {
         }
         @media (max-width: 550px) {
             min-width: 100%;
+            padding-bottom: 15px;
+            p,
+            h1 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                padding-top: 0px;
+            }
         }
     }
     .box-6 {
@@ -475,6 +538,17 @@ header {
         }
         @media (max-width: 550px) {
             min-width: 100%;
+            padding-bottom: 15px;
+            p,
+            h1 {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                padding-top: 0px;
+            }
         }
     }
 }
@@ -502,7 +576,7 @@ header {
     justify-content: flex-end;
     @media (max-width: 700px) {
         min-height: unset;
-        background-color:#fcfcfc;
+        background-color: #fcfcfc;
     }
     &::before {
         content: "";
@@ -687,8 +761,12 @@ header {
     }
     .wrapper-3 {
         .box {
-            width: 33%;
+            width: 33.33%;
             padding: 90px 20px 30px 40px;
+            @media (max-width: 450px) {
+                width: 50%;
+                padding: 40px 20px 30px 20px;
+            }
             h1 {
                 color: #22356f;
                 font-size: 14px;
