@@ -24,7 +24,7 @@ header {
     width: 1160px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0px 15px;
+    padding: 0px 20px;
 }
 
 .header-container {
@@ -53,15 +53,12 @@ header {
 .hero {
     font: 100% $font-stack;
     width: 100%;
-    min-height: 840px;
+    min-height: 100vh;
     max-width: 100%;
     margin: 0 auto;
     background-color: #f4f9e2;
     position: relative;
-    @media (max-width: 913px) {
-        min-height: 100vh;
-        padding-bottom: 20px;
-    }
+    padding-bottom: 30px;
     &::before {
         content: "";
         position: absolute;
@@ -145,6 +142,7 @@ header {
     position: relative;
     @media (max-width: 900px) {
         min-height: unset;
+        padding-bottom: 50px;
     }
     &::before {
         content: "";
@@ -177,6 +175,7 @@ header {
             font-size: 24px;
             padding: 50px 0px 0px 0px;
             @media (max-width: 900px) {
+                padding-top: 15px;
                 max-width: unset;
             }
         }
@@ -192,6 +191,8 @@ header {
     position: relative;
     @media (max-width: 900px) {
         padding-top: 40px;
+        padding-bottom: 70px;
+        min-height: unset;
         flex-direction: column;
     }
     &::after {
@@ -199,13 +200,19 @@ header {
         color: #22356f80;
         position: absolute;
         bottom: 30px;
-        left: 40%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
     }
     h1 {
         color: #22356f;
         font-size: 16px;
         max-width: 25%;
         margin: 6px 50px 5px 106px;
+        @media (max-width: 900px) {
+            margin: unset;
+            padding: 0 20px;
+        }
     }
     p {
         color: #22356f;
@@ -216,6 +223,13 @@ header {
             margin-right: 0px;
             padding-bottom: 100px;
             padding-right: 50px;
+        }
+        @media (max-width: 900px) {
+            margin: unset;
+            display: block;
+            width: 100%;
+            min-width: 100%;
+            padding: 15px 20px;
         }
     }
 }
@@ -230,70 +244,40 @@ header {
         color: #e9b730;
         margin-right: 10px;
     }
-    .box-1 {
+    .box {
         width: 25%;
-        background-color: #ffe2de;
         font-size: 32px;
         padding: 95px 50px 211px 68px;
+        &.first {
+            background-color: #ffe2de;
+        }
+        &.second {
+            background-color: #c4e769;
+        }
+        &.third {
+            background-color: #62d0df;
+        }
+        &.fourth {
+            background-color: #0052c1;
+        }
         .overline {
             height: 1px;
             width: 100%;
             background-color: #ffffff;
             margin-bottom: 23px;
+            transition: all 200ms ease-in-out;
         }
-        @media (max-width: 1000px) {
-            width: 50%;
+        .text-container {
+            display: flex;
+            flex-wrap: nowrap;
+            line-height: 1;
         }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
-    }
-    .box-2 {
-        width: 25%;
-        background-color: #c4e769;
-        font-size: 32px;
-        padding: 95px 52px 211px 68px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
-        }
-        @media (max-width: 1000px) {
-            width: 50%;
-        }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
-    }
-    .box-3 {
-        width: 25%;
-        background-color: #62d0df;
-        font-size: 32px;
-        padding: 95px 64px 211px 68px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
-        }
-        @media (max-width: 1000px) {
-            width: 50%;
-        }
-        @media (max-width: 550px) {
-            width: 100%;
-        }
-    }
-    .box-4 {
-        width: 25%;
-        background-color: #0052c1;
-        font-size: 32px;
-        padding: 95px 68px 211px 68px;
-        .overline {
-            height: 1px;
-            width: 100%;
-            background-color: #ffffff;
-            margin-bottom: 23px;
+        &:hover {
+            filter: hue-rotate(180deg);
+            cursor: pointer;
+            .overline {
+                transform: translate(0, -20px);
+            }
         }
         @media (max-width: 1000px) {
             width: 50%;
