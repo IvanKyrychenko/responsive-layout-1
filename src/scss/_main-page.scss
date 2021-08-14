@@ -96,6 +96,7 @@ header {
         }
         @media (max-width: 550px) {
             max-width: unset;
+            font-size: 35px;
         }
     }
     p {
@@ -612,7 +613,7 @@ header {
             padding: 110px 50px 100px 60px;
             @media (max-width: 700px) {
                 padding: 40px 20px;
-                font-size: 30px;
+                font-size: 25px;
             }
         }
     }
@@ -683,7 +684,7 @@ header {
             @media (max-width: 1010px) {
                 padding-top: 0px;
                 padding-bottom: 0px;
-                font-size: 50px;
+                font-size: 40px;
             }
         }
         p {
@@ -692,7 +693,7 @@ header {
             padding-top: 37px;
             max-width: 50%;
             @media (max-width: 1010px) {
-                font-size: 28px;
+                font-size: 25px;
             }
             @media (max-width: 830px) {
                 max-width: 80%;
